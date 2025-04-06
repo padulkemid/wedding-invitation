@@ -6,7 +6,7 @@ const router = createRouter({
   routes: [
     {
       path: '/wedding',
-      component: () => App,
+      component: App,
     },
     {
       path: '/:pathMatch(.*)*',

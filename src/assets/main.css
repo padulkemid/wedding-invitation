@@ -1,5 +1,12 @@
 @import './reset.css';
 
+@font-face {
+  font-family: "Excalifont";
+  src: url('fonts/Excalifont-Regular.woff2') format('woff2');
+  font-display: auto;
+  unicode-range: U+000-5FF;
+}
+
 #app {
   width: 100vw;
   height: 100vh;
@@ -10,6 +17,6 @@
   align-items: center;
 
   background-color: #a8d0f0; /* light blue test */
-
-  font-family: sans-serif;
+  font-family: "Excalifont", sans-serif;
 }
+

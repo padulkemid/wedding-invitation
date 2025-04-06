@@ -1,123 +1,226 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref, computed, onMounted, onUnmounted } from 'vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+const guestName = computed(() => route.query.gn?.toString() || 'Hamba Allah');
+
+// Sample data - in a real app you would pass these as props or fetch them
+const date = ref('<date>');
+const qrCode = ref('<qr_code>');
+const qrLink = ref('<link>');
+const mapsText = ref('<maps>');
+
+// Responsive state management
+const windowWidth = ref(window.innerWidth);
+const isMobile = computed(() => windowWidth.value <= 820);
+
+// Update window width on resize
+const handleResize = () => {
+  windowWidth.value = window.innerWidth;
+};
+
+// Lifecycle hooks for event listeners
+onMounted(() => {
+  window.addEventListener('resize', handleResize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize);
+});
+</script>
 
 <template>
-  <header>
-    <div class="header-container">
-      <h3>the wedding of</h3>
+  <div class="container">
+    <div class="header">
+      <p class="subtitle">the wedding of</p>
       <h1>Fadhil & Tanaya</h1>
     </div>
-  </header>
-  <main>
-    <div class="body-container">
-      <div id="left">
-        <div class="maps-container">
-          <p style="color: aquamarine">maps box</p>
+
+    <div class="content" :class="{ mobile: isMobile }">
+      <!-- Desktop Layout -->
+      <template v-if="!isMobile">
+        <div class="desktop-inner-card">
+          <div class="maps-section">
+            <div class="maps-container">
+              {{ mapsText }}
+            </div>
+          </div>
+          <div class="info-section">
+            <div class="guest-container">
+              {{ guestName }}
+            </div>
+            <div class="details-row">
+              <div class="date-container">
+                {{ date }}
+              </div>
+              <div class="qr-container">
+                {{ qrCode }}
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div id="right">
-        <div class="guest-container">
-          <p>hi, guest_name</p>
-        </div>
-        <div id="right-bottom">
+      </template>
+
+      <!-- Mobile Layout -->
+      <template v-else>
+        <div class="mobile-inner-card">
+          <div class="guest-container">
+            {{ guestName }}
+          </div>
           <div class="date-container">
-            <p>date</p>
+            {{ date }}
+          </div>
+          <div class="maps-container">
+            {{ mapsText }}
           </div>
           <div class="qr-container">
-            <p>qr_code</p>
+            {{ qrLink }}
           </div>
         </div>
-      </div>
+      </template>
     </div>
-  </main>
+  </div>
 </template>
 
 <style scoped>
-h2 {
-  margin: 0;
-}
+.container {
+  width: 100%;
+  max-width: 1000px;
 
-.header-container {
-  background-color: red;
-}
-
-.body-container {
-  margin: 2em auto;
-  padding: 8em;
-  height: 85vh;
-
-  background-color: cyan;
+  height: auto;
+  max-height: 90vh;
 
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 0.2em;
+  flex-direction: column;
+  overflow: hidden;
+
+  padding: 1.5rem;
 }
 
-.body-container > div {
+.header {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  text-shadow: 1px 1px black;
+  margin-bottom: 0.2rem;
+}
+
+h1 {
+  font-size: 2.1rem;
+  font-weight: bold;
+  text-shadow: 3px 3px black;
+}
+
+.content {
   flex: 1;
-  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Desktop Layout */
+.desktop-inner-card {
+  background-color: #ffd6d6; /* pink test */
+
+  box-shadow: 5px 5px;
+
+  padding: 1rem;
+  height: 100%;
+
+  display: flex;
+}
+
+.maps-section {
+  flex: 1.5;
+  padding-right: 1rem;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  gap: 1rem;
 }
 
 .maps-container {
-  background-color: green;
+  background-color: #b4e9b4; /* light green test */
+
   height: 100%;
+  padding: 1rem;
+
+  display: flex; /* only for centering */
+  justify-content: center;
+  align-items: center;
 }
 
 .guest-container {
-  background-color: black;
+  background-color: #4a8fe7; /* blue test */
   color: white;
-  height: 40%;
+
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.details-row {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
 }
 
 .date-container {
-  background-color: brown;
+  background-color: #a67c52; /* brown test */
   color: white;
+
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.8rem;
 }
 
 .qr-container {
-  background-color: yellow;
+  background-color: #ffed8a; /* yellow test */
+
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.8rem;
 }
 
-#right {
+/* Mobile Layout */
+.mobile .content {
+  justify-content: center;
+}
+
+.mobile-inner-card {
+  background-color: #ffd6d6; /* pink test */
+  box-shadow: 8px 8px;
+
   display: flex;
   flex-direction: column;
-  gap: 0.2em;
+  gap: 1rem;
+
+  padding: 1rem;
+  width: 100%;
 }
 
-#right-bottom {
-  height: 60%;
-
-  display: flex;
-  flex-direction: row;
-  gap: 0.3em;
+.mobile .guest-container,
+.mobile .date-container,
+.mobile .maps-container,
+.mobile .qr-container {
+  padding: 1rem;
+  text-align: center;
 }
 
-#right-bottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-#right-bottom > div {
+.mobile .maps-container {
   flex: 1;
-  min-width: 0;
-}
-
-@media only screen and (max-width: 820px) {
-  .body-container {
-    height: 95vh;
-    margin: 1em auto;
-    padding: 0.7em;
-
-    flex-direction: column;
-  }
-
-  .maps-container {
-    margin: auto 0;
-  }
-
-  #right-bottom {
-    flex-direction: column;
-  }
+  min-height: 150px;
 }
 </style>

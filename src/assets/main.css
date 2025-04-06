@@ -1,23 +1,15 @@
 @import './reset.css';
 
 #app {
-  padding: 1em 2em;
-}
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
 
-body {
-  overflow: hidden;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-@media (max-width: 820px) {
-  #app {
-    zoom: 0.8;
-    -moz-transform: scale(1);/* Firefox Property */
-    -moz-transform-origin: 0 0;
-    -o-transform: scale(1);/* Opera Property */
-    -o-transform-origin: 0 0;
-    -webkit-transform: scale(1);/* Safari Property */
-    -webkit-transform-origin: 0 0;
-    transform: scale(1); /* Standard Property */
-    transform-origin: 0 0;  /* Standard Property */
-  }
+  background-color: #a8d0f0; /* light blue test */
+
+  font-family: sans-serif;
 }

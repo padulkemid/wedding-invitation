@@ -1,85 +1,123 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+    <div class="header-container">
+      <h3>the wedding of</h3>
+      <h1>Fadhil & Tanaya</h1>
     </div>
   </header>
-
-  <RouterView />
+  <main>
+    <div class="body-container">
+      <div id="left">
+        <div class="maps-container">
+          <p style="color: aquamarine">maps box</p>
+        </div>
+      </div>
+      <div id="right">
+        <div class="guest-container">
+          <p>hi, guest_name</p>
+        </div>
+        <div id="right-bottom">
+          <div class="date-container">
+            <p>date</p>
+          </div>
+          <div class="qr-container">
+            <p>qr_code</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+h2 {
+  margin: 0;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.header-container {
+  background-color: red;
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+.body-container {
+  margin: 2em auto;
+  padding: 8em;
+  height: 85vh;
+
+  background-color: cyan;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 0.2em;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+.body-container > div {
+  flex: 1;
+  min-width: 0;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+.maps-container {
+  background-color: green;
+  height: 100%;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+.guest-container {
+  background-color: black;
+  color: white;
+  height: 40%;
 }
 
-nav a:first-of-type {
-  border: 0;
+.date-container {
+  background-color: brown;
+  color: white;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+.qr-container {
+  background-color: yellow;
+}
+
+#right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+#right-bottom {
+  height: 60%;
+
+  display: flex;
+  flex-direction: row;
+  gap: 0.3em;
+}
+
+#right-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#right-bottom > div {
+  flex: 1;
+  min-width: 0;
+}
+
+@media only screen and (max-width: 820px) {
+  .body-container {
+    height: 95vh;
+    margin: 1em auto;
+    padding: 0.7em;
+
+    flex-direction: column;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  .maps-container {
+    margin: auto 0;
   }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+  #right-bottom {
+    flex-direction: column;
   }
 }
 </style>

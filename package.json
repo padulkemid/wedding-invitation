@@ -2,7 +2,7 @@
   "name": "wedding",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
+  "description": "my wedding invitation web",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",

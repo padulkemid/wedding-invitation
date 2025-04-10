@@ -13,7 +13,7 @@ const props = defineProps<Props>();
 
 <template>
   <div :class="props.class">
-    <img v-if="props.qr" :src="qrImage" alt="qr" />
+    <img v-if="props.qr" :src="qrImage" alt="qr" data-test="qr_image" />
     <a v-else :href="Constants.LOCATION.SAWERIA" target="_blank">
       {{ Translations.BLESSING }}
     </a>

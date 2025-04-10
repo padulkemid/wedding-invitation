@@ -15,6 +15,7 @@ export default mergeConfig(
           'src/**/*.{ts,js,vue}',
           '!src/**/*.d.ts',
           '!src/main.ts',
+          '!src/router',
           '!src/App.vue',
           '!src/**/constants.ts',
           '!src/**/keys.ts',

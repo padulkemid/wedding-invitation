@@ -15,6 +15,7 @@ const props = defineProps<Props>();
       <br />
       {{ Translations.TIME }}
       <br />
+      <br />
       {{ Translations.LOCATION }}
     </h3>
   </div>

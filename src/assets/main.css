@@ -7,6 +7,10 @@
   unicode-range: U+000-5FF;
 }
 
+body {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7)), url('images/bg_desktop.webp') center/cover no-repeat;
+}
+
 #app {
   width: 100vw;
   height: 100vh;
@@ -16,7 +20,7 @@
   justify-content: center;
   align-items: center;
 
-  background-color: #a8d0f0; /* light blue test */
-  font-family: "Excalifont", sans-serif;
-}
 
+  font-family: "Excalifont", sans-serif;
+  /* background-color: #ffd6d6; */
+}

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Constants from '@/utils/constants';
 import Translations from '@/utils/translations';
+import qrImage from '@/assets/images/qr.png';
 
 interface Props {
   class?: string;
@@ -12,9 +13,17 @@ const props = defineProps<Props>();
 
 <template>
   <div :class="props.class">
-    <img v-if="props.qr" :src="Constants.LOCATION.QR_IMAGE" alt="qr" />
+    <img v-if="props.qr" :src="qrImage" alt="qr" />
     <a v-else :href="Constants.LOCATION.SAWERIA" target="_blank">
       {{ Translations.BLESSING }}
     </a>
   </div>
 </template>
+
+<style scoped>
+a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  text-align: center;
+}
+</style>

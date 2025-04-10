@@ -1,14 +1,16 @@
 @import './reset.css';
 
 @font-face {
-  font-family: "Excalifont";
+  font-family: 'Excalifont';
   src: url('fonts/Excalifont-Regular.woff2') format('woff2');
   font-display: auto;
   unicode-range: U+000-5FF;
 }
 
 body {
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7)), url('images/bg_desktop.webp') center/cover no-repeat;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7)),
+    url('images/bg_desktop.webp') center/cover no-repeat;
 }
 
 #app {
@@ -20,7 +22,6 @@ body {
   justify-content: center;
   align-items: center;
 
-
-  font-family: "Excalifont", sans-serif;
+  font-family: 'Excalifont', sans-serif;
   /* background-color: #ffd6d6; */
 }

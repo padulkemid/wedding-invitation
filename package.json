@@ -1,8 +1,11 @@
 {
   "name": "wedding",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
-  "description": "my wedding invitation web",
+  "description": "padul wedding invitation web",
+  "engines": {
+    "bun": ">=1.2.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
@@ -22,6 +25,7 @@
     "@types/jsdom": "^21.1.7",
     "@types/node": "^22.13.14",
     "@vitejs/plugin-vue": "^5.2.3",
+    "@vitest/coverage-istanbul": "3.1.1",
     "@vitest/eslint-plugin": "^1.1.38",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.5.0",

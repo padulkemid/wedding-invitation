@@ -9,8 +9,8 @@
 
 body {
   background:
-    linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7)),
-    url('images/bg_desktop.webp') center/cover no-repeat;
+    linear-gradient(rgba(190, 232, 223, 0.4), rgba(255, 255, 255, 0.8)),
+    url('images/bg.webp') center/cover no-repeat;
 }
 
 #app {

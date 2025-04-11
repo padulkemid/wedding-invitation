@@ -16,9 +16,7 @@ import QrBlock from '@/components/blocks/QrBlock.vue';
 
 <style scoped>
 .mobile-card {
-  background: url('@/assets/images/bg_mobile.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background-color: #ffd6d6; /* pink test */
 
   border: 3px solid black;
   box-shadow: 7px 7px;

@@ -52,48 +52,4 @@ import QrBlock from '@/components/blocks/QrBlock.vue';
   gap: 1rem;
   flex: 1;
 }
-
-/* Block Containers */
-.maps-container {
-  display: flex; /* only for centering */
-  justify-content: center;
-  align-items: center;
-}
-
-.guest-container {
-  background-color: #4a8fe7; /* blue test */
-  color: white;
-  border: 2px solid black;
-
-  padding: 0.8rem;
-  text-align: center;
-  text-shadow: 2px 2px black;
-}
-
-.date-container {
-  background-color: #a67c52; /* brown test */
-  border: 2px solid black;
-  text-shadow: 2px 2px black;
-  color: white;
-
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  padding: 0.8rem;
-}
-
-.qr-container {
-  background-color: #ffed8a; /* yellow test */
-  border: 2px solid black;
-
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-
-  padding: 0.8rem;
-}
 </style>

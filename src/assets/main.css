@@ -2,26 +2,19 @@
 @import './container.css';
 
 @font-face {
-  font-family: 'Excalifont';
-  src: url('fonts/Excalifont-Regular.woff2') format('woff2');
-  unicode-range: U+000-5FF;
+  font-family: 'Vailery';
+  src: url('fonts/vailery.ttf') format('truetype');
   font-display: swap;
 }
 
 body {
-  background:
-    linear-gradient(rgba(190, 232, 223, 0.4), rgba(255, 255, 255, 0.8)),
-    url('images/bg.webp') center/cover no-repeat;
+  background: #bfddff;
 }
 
 #app {
-  width: 100vw;
-  height: 100vh;
-  padding: 1rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-family: 'Excalifont', sans-serif;
+  font-family: 'Georgia', serif;
 }

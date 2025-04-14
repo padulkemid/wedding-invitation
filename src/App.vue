@@ -1,11 +1,22 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 import HeaderText from './components/HeaderText.vue';
 import DesktopView from './views/DesktopView.vue';
 import MobileView from './views/MobileView.vue';
 
 const windowWidth = ref(window.innerWidth);
 const isMobile = computed(() => windowWidth.value <= 1000);
+
+const handleResize = () => {
+  windowWidth.value = window.innerWidth;
+};
+
+onMounted(() => {
+  window.addEventListener('resize', handleResize);
+});
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize);
+});
 </script>
 
 <template>
@@ -19,14 +30,10 @@ const isMobile = computed(() => windowWidth.value <= 1000);
 <style scoped>
 .container {
   width: 100%;
-  max-width: 1000px;
-
-  height: auto;
-  max-height: 90vh;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 
   padding: 1.5rem;
 }

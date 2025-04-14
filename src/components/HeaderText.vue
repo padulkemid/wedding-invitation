@@ -16,14 +16,15 @@ div {
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   text-shadow: 1px 1px black;
 
   margin-bottom: 0.2rem;
 }
 
 h1 {
-  font-size: 2.1rem;
+  font-size: 3rem;
   text-shadow: 3px 3px black;
+  font-family: 'Vailery', 'Georgia', serif;
 }
 </style>

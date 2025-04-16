@@ -3,9 +3,9 @@ const Translations = {
   DEFAULT_GUEST_NAME: 'Hamba Allah',
   HEADER_SUBTITLE: 'the wedding of',
   HEADER_TITLE: 'Fadhil and Tanaya',
-  DATE: '4 May 2025',
-  TIME: '09.30 - 12.00',
-  LOCATION: '@Telang Biru, by hobihobi',
+  DATE: 'Sunday, 4 May 2025',
+  TIME: '09.00 - 12.00 WIB',
+  LOCATION: 'at Telang Biru by hobihobi',
   BLESSING: 'Kindly bless our day via this link!',
 };
 

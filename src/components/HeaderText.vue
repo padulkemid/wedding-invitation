@@ -11,20 +11,20 @@ import Translations from '@/utils/translations';
 
 <style scoped>
 div {
-  color: white;
+  color: black;
   margin-bottom: 1.5rem;
 }
 
 .subtitle {
   font-size: 1.8rem;
-  text-shadow: 1px 1px black;
+  text-shadow: 1px 1px #848d96;
 
   margin-bottom: 0.2rem;
 }
 
 h1 {
-  font-size: 3rem;
-  text-shadow: 3px 3px black;
+  font-size: 2.6rem;
+  text-shadow: 1px 1px #848d96;
   font-family: 'Vailery', 'Georgia', serif;
 }
 </style>

@@ -10,13 +10,19 @@ const props = defineProps<Props>();
 
 <template>
   <div :class="props.class">
-    <h3>
+    <p>
       {{ Translations.DATE }}
       <br />
-      {{ Translations.TIME }}
+      <b>{{ Translations.TIME }}</b>
       <br />
       <br />
       {{ Translations.LOCATION }}
-    </h3>
+    </p>
   </div>
 </template>
+
+<style scoped>
+p {
+  font-size: 1.2rem;
+}
+</style>

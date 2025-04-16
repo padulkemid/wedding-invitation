@@ -17,9 +17,8 @@ import QrBlock from '@/components/blocks/QrBlock.vue';
   <MessageBlock />
   <div class="desktop-card">
     <div class="maps-section">
-      <MapsBlock class="maps-container" width="538" height="350" />
+      <MapsBlock class="maps-container" width="100%" height="100%" />
     </div>
-
     <div class="details-section">
       <GuestBlock class="guest-container" />
       <div class="right-bottom-detail">
@@ -32,7 +31,7 @@ import QrBlock from '@/components/blocks/QrBlock.vue';
 
 <style scoped>
 .desktop-card {
-  background-color: #e8ded7;
+  background-color: #f5f5dc;
 
   border: 2px solid #bcc1c1;
   box-shadow: 7px 7px;

@@ -18,7 +18,7 @@ import QrBlock from '@/components/blocks/QrBlock.vue';
 
 <style scoped>
 .mobile-card {
-  background-color: #e8ded7;
+  background-color: #f5f5dc;
 
   border: 2px solid #bcc1c1;
   box-shadow: 7px 7px;

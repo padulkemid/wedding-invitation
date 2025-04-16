@@ -13,7 +13,7 @@ const props = defineProps<Props>();
 
 <template>
   <div :class="props.class">
-    <a v-if="props.qr" href="Constants.LOCATION.SAWERIA" target="_blank">
+    <a v-if="props.qr" :href="Constants.LOCATION.SAWERIA" target="_blank">
       <img :src="qrImage" alt="qr" data-test="qr_image" loading="lazy" />
     </a>
     <a v-else :href="Constants.LOCATION.SAWERIA" target="_blank">
@@ -24,7 +24,7 @@ const props = defineProps<Props>();
 
 <style scoped>
 a {
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-decoration: none;
   text-align: center;
 }

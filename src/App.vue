@@ -29,12 +29,29 @@ onUnmounted(() => {
 
 <style scoped>
 .container {
-  width: 100%;
   height: 100%;
 
   display: flex;
   flex-direction: column;
 
   padding: 1.5rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    width: 85%;
+  }
 }
 </style>

@@ -15,3 +15,5 @@ This is my wedding invitation web, very simple and optimized for SPA.
 2. `bun run dev --host`
 3. ???
 4. Profit!
+
+to run the test just run: `bun run test:coverage` or `bun run test:unit`

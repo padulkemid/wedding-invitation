@@ -17,8 +17,8 @@ const guestName = computed(() => router.query.gn?.toString() || Translations.DEF
   <div :class="props.class">
     <p>
       {{ Translations.GUEST_HEADER }}
-      <b>{{ capitalizeWords(guestName) }}</b>
-      ,<br />
+      <b>{{ capitalizeWords(guestName) }}</b
+      >,<br />
       {{ Translations.GUEST_BODY }}
     </p>
   </div>

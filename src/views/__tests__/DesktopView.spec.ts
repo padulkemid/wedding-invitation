@@ -6,6 +6,7 @@ import MapsBlock from '@/components/blocks/MapsBlock.vue';
 import GuestBlock from '@/components/blocks/GuestBlock.vue';
 import DateBlock from '@/components/blocks/DateBlock.vue';
 import QrBlock from '@/components/blocks/QrBlock.vue';
+import MessageBlock from '@/components/blocks/MessageBlock.vue';
 
 vi.mock('vue-router', () => ({
   useRoute: vi.fn(() => ({
@@ -25,5 +26,6 @@ describe('DesktopView', () => {
     expect(wrapper.findComponent(GuestBlock).exists()).toBe(true);
     expect(wrapper.findComponent(DateBlock).exists()).toBe(true);
     expect(wrapper.findComponent(QrBlock).exists()).toBe(true);
+    expect(wrapper.findComponent(MessageBlock).exists()).toBe(true);
   });
 });

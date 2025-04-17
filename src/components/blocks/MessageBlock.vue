@@ -4,11 +4,13 @@ import AmpersandDivider from '../AmpersandDivider.vue';
 </script>
 
 <template>
-  <div class="message view">
+  <div class="message view decorated">
+    <!-- <img src="@/assets/images/rose.svg" alt="rose" class="corner" /> -->
+
     <p class="justify bottom-gap">
       {{ Translations.MESSAGE_HEADER }}
     </p>
-    <p class="center bottom-gap">
+    <p class="center bottom-gap decorated circular-rose-bg">
       {{ Translations.MESSAGE_INVITATION_OPENER }}
       <br /><br />
 
@@ -65,5 +67,18 @@ b {
 .message {
   flex-direction: column;
   margin: auto;
+}
+
+.circular-rose-bg::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url('@/assets/images/circular_rose.svg');
+
+  opacity: 0.15;
 }
 </style>

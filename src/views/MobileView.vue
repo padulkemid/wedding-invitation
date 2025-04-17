@@ -8,7 +8,7 @@ import QrBlock from '@/components/blocks/QrBlock.vue';
 
 <template>
   <MessageBlock />
-  <div class="mobile view">
+  <div class="mobile view decorated">
     <GuestBlock class="guest block" />
     <DateBlock class="date block" />
     <MapsBlock />

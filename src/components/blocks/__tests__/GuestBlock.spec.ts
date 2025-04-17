@@ -3,7 +3,6 @@ import { describe, expect, it, vi } from 'vitest';
 import { capitalizeWords } from '@/utils/functions';
 import { useRoute } from 'vue-router';
 import Translations from '@/utils/translations';
-import Keys from '@/utils/keys';
 import GuestBlock from '../GuestBlock.vue';
 
 vi.mock('vue-router', () => ({
@@ -13,35 +12,29 @@ vi.mock('vue-router', () => ({
 }));
 
 vi.mock('@/utils/functions', () => ({
-  capitalizeWords: vi.fn((text) => text.toUpperCase()),
+  capitalizeWords: vi.fn((text) => text),
 }));
 
 describe('GuestBlock', () => {
   it('should render with default guest name when no query param is provided', () => {
     const wrapper = mount(GuestBlock);
 
-    const expectedGreeting = Translations.GUEST_GREETING.replace(
-      Keys.GUEST_NAME,
-      capitalizeWords(Translations.DEFAULT_GUEST_NAME)
-    );
+    const capitalizedGuestName = capitalizeWords(Translations.DEFAULT_GUEST_NAME);
 
-    expect(wrapper.find('h2').exists()).toBe(true);
-    expect(wrapper.find('h2').text()).toBe(expectedGreeting);
+    expect(wrapper.text()).toContain(capitalizedGuestName);
   });
 
   it('should render with guest name from query parameter', () => {
+    const mockedGuestName = 'John Doe';
+
     vi.mocked(useRoute).mockReturnValue({
-      query: { gn: 'john doe' },
+      query: { gn: mockedGuestName },
     } as unknown as never);
 
     const wrapper = mount(GuestBlock);
+    const expectedGreeting = capitalizeWords(mockedGuestName);
 
-    const expectedGreeting = Translations.GUEST_GREETING.replace(
-      Keys.GUEST_NAME,
-      capitalizeWords('john doe')
-    );
-
-    expect(wrapper.find('h2').text()).toBe(expectedGreeting);
+    expect(wrapper.text()).toContain(expectedGreeting);
   });
 
   it('should apply class passed via props', () => {

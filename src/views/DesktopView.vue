@@ -8,7 +8,7 @@ import QrBlock from '@/components/blocks/QrBlock.vue';
 
 <template>
   <MessageBlock />
-  <div class="desktop view">
+  <div class="desktop view decorated">
     <div class="maps">
       <MapsBlock class="maps-container" width="100%" height="100%" />
     </div>

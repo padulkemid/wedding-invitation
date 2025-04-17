@@ -24,5 +24,6 @@ const props = defineProps<Props>();
 <style scoped>
 p {
   font-size: 1.2rem;
+  text-align: center;
 }
 </style>

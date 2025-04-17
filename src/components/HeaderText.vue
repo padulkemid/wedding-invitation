@@ -4,8 +4,8 @@ import Translations from '@/utils/translations';
 
 <template>
   <div>
-    <p class="subtitle">{{ Translations.HEADER_SUBTITLE }}</p>
-    <h1>{{ Translations.HEADER_TITLE }}</h1>
+    <p class="subtitle shadow">{{ Translations.HEADER_SUBTITLE }}</p>
+    <h1 class="shadow">{{ Translations.HEADER_TITLE }}</h1>
   </div>
 </template>
 
@@ -15,16 +15,18 @@ div {
   margin-bottom: 1.5rem;
 }
 
+.shadow {
+  text-shadow: 1px 1px var(--roman-silver);
+}
+
 .subtitle {
   font-size: 1.8rem;
-  text-shadow: 1px 1px #848d96;
 
   margin-bottom: 0.2rem;
 }
 
 h1 {
-  font-size: 2.6rem;
-  text-shadow: 1px 1px #848d96;
+  font-size: 2.5rem;
   font-family: 'Vailery', 'Georgia', serif;
 }
 </style>

@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Vailery';
+  src: url('../fonts/Vailery-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dancing Script';
+  src: url('../fonts/DancingScript-Regular.ttf') format('truetype');
+  font-display: swap;
+}

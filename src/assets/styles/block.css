@@ -1,0 +1,41 @@
+.block {
+  color: white;
+  background-color: var(--dolphin-gray);
+  border: 2px solid black;
+
+  text-shadow: 1px 1px black;
+}
+
+.maps-container {
+  width: 100%;
+  height: 100%;
+}
+
+.guest {
+  padding: 0.8rem;
+}
+
+.date {
+  display: flex;
+  flex: 1;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.8rem;
+}
+
+.qr-block {
+  background-color: var(--crayola-yellow);
+  color: black;
+  border: 2px solid black;
+
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+  text-shadow: 1px 1px white;
+
+  padding: 0.8rem;
+}

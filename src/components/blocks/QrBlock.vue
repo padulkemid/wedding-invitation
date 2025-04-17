@@ -25,7 +25,7 @@ const props = defineProps<Props>();
 <style scoped>
 a {
   font-size: 1rem;
+
   text-decoration: none;
-  text-align: center;
 }
 </style>

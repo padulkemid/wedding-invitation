@@ -8,30 +8,10 @@ import QrBlock from '@/components/blocks/QrBlock.vue';
 
 <template>
   <MessageBlock />
-  <div class="mobile-card">
-    <GuestBlock class="guest-container" />
-    <DateBlock class="date-container" />
+  <div class="mobile view">
+    <GuestBlock class="guest block" />
+    <DateBlock class="date block" />
     <MapsBlock />
-    <QrBlock class="qr-container" />
+    <QrBlock class="qr-block" />
   </div>
 </template>
-
-<style scoped>
-.mobile-card {
-  background-color: #f5f5dc;
-
-  border: 2px solid #bcc1c1;
-  box-shadow: 7px 7px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  padding: 1rem;
-  width: 100%;
-  height: 100%;
-  margin: 1rem auto;
-
-  text-align: center;
-}
-</style>

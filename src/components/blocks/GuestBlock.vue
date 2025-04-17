@@ -16,9 +16,10 @@ const guestName = computed(() => router.query.gn?.toString() || Translations.DEF
 <template>
   <div :class="props.class">
     <p>
-      Dear <b>{{ capitalizeWords(guestName) }}</b
-      >,<br />
-      we welcome you to our joyous union!
+      {{ Translations.GUEST_HEADER }}
+      <b>{{ capitalizeWords(guestName) }}</b>
+      ,<br />
+      {{ Translations.GUEST_BODY }}
     </p>
   </div>
 </template>
@@ -26,5 +27,6 @@ const guestName = computed(() => router.query.gn?.toString() || Translations.DEF
 <style scoped>
 p {
   font-size: 1.2rem;
+  text-align: center;
 }
 </style>

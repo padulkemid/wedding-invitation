@@ -9,9 +9,6 @@ export default defineConfig({
     include: ['vue', 'vue-router'],
   },
   server: {
-    allowedHosts: [
-      '.ngrok-free.app'
-    ],
     headers: {
       'Access-Control-Allow-Origin': '*',
     },

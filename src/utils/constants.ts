@@ -3,8 +3,14 @@ const LOCATION = {
   SAWERIA: 'https://saweria.co/padulkemid',
 };
 
+const ROUTE = {
+  WEDDING: '/wedding',
+  PATH_MATCH_ANY: '/:pathMatch(.*)*',
+};
+
 const Constants = {
   LOCATION,
+  ROUTE,
 };
 
 export default Constants;

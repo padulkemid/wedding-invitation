@@ -18,7 +18,6 @@ export default mergeConfig(
           '!src/router',
           '!src/App.vue',
           '!src/**/constants.ts',
-          '!src/**/keys.ts',
           '!src/**/translations.ts',
           '!src/**/__mocks__/**',
         ],

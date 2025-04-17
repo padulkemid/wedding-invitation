@@ -31,6 +31,7 @@ const Translations = {
   MESSAGE_BRIDE_NAME: 'Tanaya Reksa Avicena',
   MESSAGE_BRIDE_PARENTS_BRIDGE: 'beloved daughter of ',
   MESSAGE_BRIDE_PARENTS_NAME: 'Mr. Nuryanto and Mrs. Mulyani',
+  FOOTER_TEXT: '+ padulkemid - . © 2025',
 };
 
 export default Translations;

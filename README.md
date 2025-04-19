@@ -1,7 +1,7 @@
-# hi!
+# Welcome!
 
 This is my wedding invitation web, very simple and optimized for SPA.  
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a970f553-7d8e-40ec-b738-2be2b736a397/deploy-status)](https://app.netlify.com/sites/padulkemid/deploys)  
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a970f553-7d8e-40ec-b738-2be2b736a397/deploy-status)](https://app.netlify.com/sites/padulkemid/deploys) [![codecov](https://codecov.io/gh/padulkemid/wedding-invitation/branch/main/graph/badge.svg)](https://codecov.io/gh/padulkemid/wedding-invitation)
 
 ## Stacks 
 
